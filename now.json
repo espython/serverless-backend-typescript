@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "/src/controllers/post.controller.ts", "use": "@now/node" }
+  ],
+  "routes": [
+    {
+      "src": "/posts/(.*)",
+      "dest": "/src/controllers/post.controller.ts",
+      "methods": ["GET"]
+    },
+    {
+      "src": "/user",
+      "dest": "/index.ts",
+      "methods": ["POST"]
+    }
+  ]
+}
